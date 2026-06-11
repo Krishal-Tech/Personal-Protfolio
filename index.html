@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Krishal Poudel — Student, AI Enthusiast, Market Analyst & Lifelong Learner based in Chitwan, Nepal. Exploring AI, financial markets, and behavioral psychology." />
+  <meta name="author" content="Krishal Poudel" />
+  <meta name="keywords" content="Krishal Poudel, AI, Machine Learning, Trading, Financial Markets, Data Analysis, Nepal, Portfolio, Chitwan" />
+  <meta property="og:title" content="Krishal Poudel — Portfolio" />
+  <meta property="og:description" content="AI Enthusiast • Market Analyst • Lifelong Learner" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/krishal-profile.jpg" />
+  <title>Krishal Poudel — AI Enthusiast & Market Analyst</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/krishal-profile.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (for utility classes) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet" />
+
+  <!-- AOS Scroll Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== ANIMATED BACKGROUND ===== -->
+  <div class="bg-grid"></div>
+  <div class="bg-gradient-orb orb-1"></div>
+  <div class="bg-gradient-orb orb-2"></div>
+  <div class="bg-gradient-orb orb-3"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-hex">
+        <svg viewBox="0 0 100 100" class="loader-svg">
+          <polygon points="50,2 95,27 95,73 50,98 5,73 5,27" fill="none" stroke="url(#loaderGrad)" stroke-width="1" />
+          <defs>
+            <linearGradient id="loaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#22d3ee" />
+              <stop offset="100%" stop-color="#a855f7" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="loader-text">KP</div>
+      </div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-mark">K</span>
+        <span class="logo-text">rishal<span class="logo-dot">.</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#interests" class="nav-link">Interests</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+          <div class="hero-greeting">
+            <span class="hero-line"></span>
+            <span class="hero-greeting-text">Hello, It's Me</span>
+          </div>
+          <h1 class="hero-name">
+            <span class="hero-name-first">Krishal</span>
+            <span class="hero-name-last">Poudel</span>
+          </h1>
+          <div class="hero-roles">
+            <span class="role-tag">Student</span>
+            <span class="role-sep">|</span>
+            <span class="role-tag" id="typed-role"></span>
+          </div>
+          <p class="hero-desc">
+            A <span class="text-accent">17-year-old</span> from <span class="text-accent">Chitwan, Nepal</span> — exploring the power of <span class="text-accent">AI</span>, <span class="text-accent">financial markets</span>, and <span class="text-accent">behavioral psychology</span> to build practical solutions and continuous growth.
+          </p>
+
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/krishal-poudel-601952396?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn" data-tooltip="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:krishalp660812@gmail.com" class="social-btn" aria-label="Email" data-tooltip="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/Krishal-Tech" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub" data-tooltip="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1GJ61K62F1/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook" data-tooltip="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/krishalpoudel10?igsh=MWh1MzRycW1qZHVsag" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram" data-tooltip="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">
+              <span>Let's Connect</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#about" class="btn btn-ghost">
+              <span>Discover More</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="hex-container" data-tilt>
+            <div class="hex-glow"></div>
+            <div class="hex-rotate-ring"></div>
+            <div class="hex-rotate-ring hex-rotate-ring-2"></div>
+            <svg viewBox="0 0 200 220" class="hex-frame">
+              <defs>
+                <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#22d3ee" />
+                  <stop offset="50%" stop-color="#a855f7" />
+                  <stop offset="100%" stop-color="#22d3ee" />
+                </linearGradient>
+                <clipPath id="hexClip">
+                  <polygon points="100,5 190,55 190,165 100,215 10,165 10,55" />
+                </clipPath>
+              </defs>
+              <image href="assets/images/krishal-profile.jpg" x="0" y="0" width="200" height="220" preserveAspectRatio="xMidYMid slice" clip-path="url(#hexClip)" />
+              <polygon points="100,5 190,55 190,165 100,215 10,165 10,55" fill="none" stroke="url(#hexGrad)" stroke-width="2.5" class="hex-stroke" />
+            </svg>
+            <div class="hex-badge">
+              <i class="fas fa-bolt"></i>
+              <span>Available</span>
+            </div>
+            <div class="hex-corner hex-corner-tl"></div>
+            <div class="hex-corner hex-corner-tr"></div>
+            <div class="hex-corner hex-corner-bl"></div>
+            <div class="hex-corner hex-corner-br"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">01 / About</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image-wrap" data-aos="fade-right" data-aos-duration="900">
+            <div class="about-image-hex" data-tilt>
+              <svg viewBox="0 0 220 240" class="about-hex-svg">
+                <defs>
+                  <linearGradient id="aboutHexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#22d3ee" />
+                    <stop offset="100%" stop-color="#a855f7" />
+                  </linearGradient>
+                  <clipPath id="aboutHexClip">
+                    <polygon points="110,5 210,60 210,180 110,235 10,180 10,60" />
+                  </clipPath>
+                </defs>
+                <image href="assets/images/krishal-profile.jpg" x="0" y="0" width="220" height="240" preserveAspectRatio="xMidYMid slice" clip-path="url(#aboutHexClip)" />
+                <polygon points="110,5 210,60 210,180 110,235 10,180 10,60" fill="none" stroke="url(#aboutHexGrad)" stroke-width="2" />
+              </svg>
+              <div class="about-floating-card card-1">
+                <i class="fas fa-brain"></i>
+                <span>AI Enthusiast</span>
+              </div>
+              <div class="about-floating-card card-2">
+                <i class="fas fa-chart-line"></i>
+                <span>Market Analyst</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content" data-aos="fade-left" data-aos-duration="900">
+            <h3 class="about-greeting">Hi, I'm <span class="gradient-text">Krishal</span> 👋</h3>
+            <p class="about-text">
+              I'm a <span class="text-accent">17-year-old student</span> from <span class="text-accent">Chitwan, Nepal</span>, building expertise at the intersection of <span class="text-accent">Artificial Intelligence</span>, <span class="text-accent">Financial Markets</span>, and <span class="text-accent">Behavioral Psychology</span>.
+            </p>
+            <p class="about-text">
+              My focus is on developing <span class="text-accent">leadership</span>, <span class="text-accent">strategic thinking</span>, and <span class="text-accent">problem-solving</span> skills — transforming knowledge into practical, real-world solutions through continuous learning and disciplined experimentation.
+            </p>
+            <p class="about-text">
+              I believe the future belongs to those who learn how to learn. Every day I push myself to understand <em>why</em> things work — from the math behind algorithms, to the psychology behind market decisions, to the patterns that shape human behavior.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-num" data-target="3">0</div>
+                <div class="stat-label">Core Focus Areas</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num" data-target="365">0</div>
+                <div class="stat-label">Days Learning</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num" data-target="17">0</div>
+                <div class="stat-label">Years Young</div>
+              </div>
+            </div>
+
+            <a href="#journey" class="btn btn-primary mt-6">
+              <span>Explore My Journey</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">02 / Skills</span>
+          <h2 class="section-title">My <span class="gradient-text">Toolkit</span></h2>
+          <p class="section-sub">Tools, languages, and frameworks I work with daily</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="0" data-tilt>
+            <div class="skill-icon-wrap" style="--skill-color: #3b82f6">
+              <i class="fab fa-python"></i>
+            </div>
+            <h3 class="skill-name">Python</h3>
+            <p class="skill-desc">Scripting, automation & data</p>
+            <div class="skill-shine"></div>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="80" data-tilt>
+            <div class="skill-icon-wrap" style="--skill-color: #22d3ee">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="skill-name">Prompt Engineering</h3>
+            <p class="skill-desc">LLM design & optimization</p>
+            <div class="skill-shine"></div>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="160" data-tilt>
+            <div class="skill-icon-wrap" style="--skill-color: #a855f7">
+              <i class="fas fa-chart-candlestick"></i>
+            </div>
+            <h3 class="skill-name">Forex Trading</h3>
+            <p class="skill-desc">Technical & fundamental analysis</p>
+            <div class="skill-shine"></div>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="240" data-tilt>
+            <div class="skill-icon-wrap" style="--skill-color: #ec4899">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="skill-name">AI & ML Concepts</h3>
+            <p class="skill-desc">Models, learning systems</p>
+            <div class="skill-shine"></div>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="320" data-tilt>
+            <div class="skill-icon-wrap" style="--skill-color: #f59e0b">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="skill-name">Data Analysis</h3>
+            <p class="skill-desc">Pattern recognition & insights</p>
+            <div class="skill-shine"></div>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="400" data-tilt>
+            <div class="skill-icon-wrap" style="--skill-color: #10b981">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="skill-name">Behavioral Psychology</h3>
+            <p class="skill-desc">Decision-making frameworks</p>
+            <div class="skill-shine"></div>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="480" data-tilt>
+            <div class="skill-icon-wrap" style="--skill-color: #06b6d4">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="skill-name">Problem Solving</h3>
+            <p class="skill-desc">Logic, structure & strategy</p>
+            <div class="skill-shine"></div>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="560" data-tilt>
+            <div class="skill-icon-wrap" style="--skill-color: #8b5cf6">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3 class="skill-name">Communication</h3>
+            <p class="skill-desc">Clarity in ideas & writing</p>
+            <div class="skill-shine"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CORE LEARNING AREAS / INTERESTS ===== -->
+    <section id="interests" class="section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">03 / Interests</span>
+          <h2 class="section-title">Core <span class="gradient-text">Learning Areas</span></h2>
+          <p class="section-sub">The three domains that shape my thinking</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="interests-grid">
+          <div class="interest-card" data-aos="fade-up" data-aos-delay="0" data-tilt>
+            <div class="interest-icon-wrap">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="interest-title">AI & ML</h3>
+            <p class="interest-desc">Exploratory research in AI fears, prompt engineering, and basic coding-to-be practical solutions and intelligent automation.</p>
+            <a href="#projects" class="interest-link">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="interest-glow"></div>
+          </div>
+
+          <div class="interest-card" data-aos="fade-up" data-aos-delay="150" data-tilt>
+            <div class="interest-icon-wrap">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="interest-title">Financial Markets</h3>
+            <p class="interest-desc">Learning market dynamics, price action, and developing each analytical frameworks — Forex & technical analysis.</p>
+            <a href="#projects" class="interest-link">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="interest-glow"></div>
+          </div>
+
+          <div class="interest-card" data-aos="fade-up" data-aos-delay="300" data-tilt>
+            <div class="interest-icon-wrap">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h3 class="interest-title">Data Analysis</h3>
+            <p class="interest-desc">Using data to identify patterns, inform decision-making, and create sense out of complex behavioral systems.</p>
+            <a href="#projects" class="interest-link">
+              Learn More <i class="fas fa-arrow-right"></i>
+            </a>
+            <div class="interest-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS / EXPERIMENTS ===== -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">04 / Projects</span>
+          <h2 class="section-title">Learning <span class="gradient-text">Projects & Experiments</span></h2>
+          <p class="section-sub">Concepts I'm actively exploring and building</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="0" data-tilt>
+            <div class="project-icon"><i class="fas fa-terminal"></i></div>
+            <div class="project-tag">AI</div>
+            <h3 class="project-title">AI Assistant Concept</h3>
+            <p class="project-desc">Exploring intelligent assistant architectures using prompt engineering and LLM workflows.</p>
+            <div class="project-footer">
+              <span class="project-status">
+                <span class="status-dot"></span> In Progress
+              </span>
+            </div>
+            <div class="project-border-glow"></div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="80" data-tilt>
+            <div class="project-icon"><i class="fas fa-project-diagram"></i></div>
+            <div class="project-tag">Markets</div>
+            <h3 class="project-title">Trading Analysis Notes</h3>
+            <p class="project-desc">Documenting patterns, setups, and lessons from daily market observation.</p>
+            <div class="project-footer">
+              <span class="project-status">
+                <span class="status-dot"></span> In Progress
+              </span>
+            </div>
+            <div class="project-border-glow"></div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="160" data-tilt>
+            <div class="project-icon"><i class="fas fa-bolt"></i></div>
+            <div class="project-tag">Python</div>
+            <h3 class="project-title">Automation Experiments</h3>
+            <p class="project-desc">Building small Python scripts to automate repetitive workflows and learn by doing.</p>
+            <div class="project-footer">
+              <span class="project-status">
+                <span class="status-dot"></span> In Progress
+              </span>
+            </div>
+            <div class="project-border-glow"></div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="240" data-tilt>
+            <div class="project-icon"><i class="fas fa-user-graduate"></i></div>
+            <div class="project-tag">Research</div>
+            <h3 class="project-title">Personal Research</h3>
+            <p class="project-desc">Self-driven research at the intersection of AI, finance, and human behavior.</p>
+            <div class="project-footer">
+              <span class="project-status">
+                <span class="status-dot"></span> In Progress
+              </span>
+            </div>
+            <div class="project-border-glow"></div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="320" data-tilt>
+            <div class="project-icon"><i class="fas fa-file-alt"></i></div>
+            <div class="project-tag">AI</div>
+            <h3 class="project-title">Prompt Engineering Study</h3>
+            <p class="project-desc">Systematic study of prompt design, chain-of-thought, and LLM reasoning patterns.</p>
+            <div class="project-footer">
+              <span class="project-status">
+                <span class="status-dot"></span> In Progress
+              </span>
+            </div>
+            <div class="project-border-glow"></div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="400" data-tilt>
+            <div class="project-icon"><i class="fas fa-lightbulb"></i></div>
+            <div class="project-tag">Psychology</div>
+            <h3 class="project-title">Behavioral Finance</h3>
+            <p class="project-desc">Investigating how cognitive biases shape decision-making in financial markets.</p>
+            <div class="project-footer">
+              <span class="project-status">
+                <span class="status-dot"></span> In Progress
+              </span>
+            </div>
+            <div class="project-border-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PHILOSOPHY ===== -->
+    <section id="philosophy" class="section philosophy-section">
+      <div class="container">
+        <div class="philosophy-card" data-aos="zoom-in">
+          <div class="philosophy-quote-mark">"</div>
+          <span class="philosophy-label">Philosophy</span>
+          <blockquote class="philosophy-quote">
+            Continuous learning and small improvements create long-term results.
+          </blockquote>
+          <div class="philosophy-author">— Krishal Poudel</div>
+          <div class="philosophy-decoration"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LEARNING JOURNEY TIMELINE ===== -->
+    <section id="journey" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">05 / Journey</span>
+          <h2 class="section-title">Learning <span class="gradient-text">Journey</span></h2>
+          <p class="section-sub">The path of curiosity, one step at a time</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-content">
+              <div class="timeline-year">2024 — Now</div>
+              <h3 class="timeline-title"><i class="fas fa-chart-candlestick"></i> Trading</h3>
+              <p class="timeline-desc">Started studying Forex markets, technical analysis, candlestick patterns, and risk management. Building disciplined market intuition.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-content">
+              <div class="timeline-year">2025 — Now</div>
+              <h3 class="timeline-title"><i class="fab fa-python"></i> Python</h3>
+              <p class="timeline-desc">Began exploring Python for data science, automation, and AI workflows. From fundamentals to libraries like pandas and numpy.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-content">
+              <div class="timeline-year">2025 — Now</div>
+              <h3 class="timeline-title"><i class="fas fa-robot"></i> Prompt Engineering</h3>
+              <p class="timeline-desc">Studying how to communicate effectively with LLMs — chain-of-thought, few-shot prompting, and structured AI reasoning.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-content">
+              <div class="timeline-year">2025 — Now</div>
+              <h3 class="timeline-title"><i class="fas fa-cogs"></i> Algorithmic Goals</h3>
+              <p class="timeline-desc">Working toward building algorithmic trading systems and data-driven decision frameworks combining AI with market analysis.</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+
+          <div class="timeline-item left timeline-future" data-aos="fade-right">
+            <div class="timeline-content">
+              <div class="timeline-year">Future</div>
+              <h3 class="timeline-title"><i class="fas fa-rocket"></i> What's Next</h3>
+              <p class="timeline-desc">Deepening expertise in machine learning, quantitative finance, and applying behavioral psychology to real-world systems.</p>
+            </div>
+            <div class="timeline-dot timeline-dot-pulse"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-label">06 / Contact</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="section-sub">Have a question, idea, or just want to say hi? Drop a message.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <h3 class="contact-info-title">Reach out through any channel</h3>
+            <p class="contact-info-desc">I'm always open to conversations about AI, markets, learning, or interesting ideas. Let's build something meaningful together.</p>
+
+            <div class="contact-items">
+              <a href="https://www.linkedin.com/in/krishal-poudel-601952396?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" class="contact-item">
+                <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div class="contact-item-info">
+                  <span class="contact-item-label">LinkedIn</span>
+                  <span class="contact-item-value">krishal-poudel</span>
+                </div>
+              </a>
+
+              <a href="mailto:krishalp660812@gmail.com" class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-item-info">
+                  <span class="contact-item-label">Email</span>
+                  <span class="contact-item-value">krishalp660812@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/Krishal-Tech" target="_blank" rel="noopener" class="contact-item">
+                <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+                <div class="contact-item-info">
+                  <span class="contact-item-label">GitHub</span>
+                  <span class="contact-item-value">Krishal-Tech</span>
+                </div>
+              </a>
+
+              <a href="https://www.facebook.com/share/1GJ61K62F1/" target="_blank" rel="noopener" class="contact-item">
+                <div class="contact-item-icon"><i class="fab fa-facebook-f"></i></div>
+                <div class="contact-item-info">
+                  <span class="contact-item-label">Facebook</span>
+                  <span class="contact-item-value">Connect on Facebook</span>
+                </div>
+              </a>
+
+              <a href="https://www.instagram.com/krishalpoudel10?igsh=MWh1MzRycW1qZHVsag" target="_blank" rel="noopener" class="contact-item">
+                <div class="contact-item-icon"><i class="fab fa-instagram"></i></div>
+                <div class="contact-item-info">
+                  <span class="contact-item-label">Instagram</span>
+                  <span class="contact-item-value">@krishalpoudel10</span>
+                </div>
+              </a>
+
+              <div class="contact-item contact-item-location">
+                <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-item-info">
+                  <span class="contact-item-label">Location</span>
+                  <span class="contact-item-value">Chitwan, Nepal 🇳🇵</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" data-aos="fade-left">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder=" " />
+                <label for="name">Full Name</label>
+                <span class="form-line"></span>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder=" " />
+                <label for="email">Email Address</label>
+                <span class="form-line"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="tel" id="mobile" name="mobile" placeholder=" " />
+                <label for="mobile">Mobile Number</label>
+                <span class="form-line"></span>
+              </div>
+              <div class="form-group">
+                <input type="text" id="subject" name="subject" required placeholder=" " />
+                <label for="subject">Subject</label>
+                <span class="form-line"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+              <label for="message">Your Message</label>
+              <span class="form-line"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+            <div class="form-note" id="form-note"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <span class="logo-mark">K</span>
+            <span class="logo-text">rishal Poudel<span class="logo-dot">.</span></span>
+          </div>
+          <p class="footer-tagline">AI Enthusiast • Market Analyst • Lifelong Learner</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/krishal-poudel-601952396?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:krishalp660812@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/Krishal-Tech" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/share/1GJ61K62F1/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/krishalpoudel10?igsh=MWh1MzRycW1qZHVsag" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="footer-divider"></div>
+          <p class="footer-copy">
+            © 2026 <span class="gradient-text">Krishal Poudel</span> · Crafted with passion in Chitwan, Nepal
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+  </main>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
