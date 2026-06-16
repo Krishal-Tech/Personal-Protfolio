@@ -2,7 +2,7 @@
 
 > A premium, futuristic personal portfolio website built with **pure HTML, CSS, and JavaScript** — no build step, no frameworks, no Node.js required.
 
-🌐 **Live**:krishalpoudel.com.np
+🌐 **Live**: http://krishalpoudel.com.np/
 
 ---
 
